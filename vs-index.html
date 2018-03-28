@@ -1,0 +1,278 @@
+<html>  
+<head>
+  <script src="underscore-min.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="dl_event.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'user': {
+        'id': undefined,
+        'group': undefined
+      },
+      'site': {
+        'language': 'cn'
+      }
+    });
+  </script>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WXX3X2R');</script>
+      <!-- End Google Tag Manager -->
+</head>
+<script>  
+    var i=1;  
+</script>  
+ <body>
+  <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXX3X2R"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <style type="text/css">
+    div {
+      margin: 50px 0px;
+      font-size: 30px;
+      color: #B16A68;
+      text-align:center; 
+    }
+
+    .example_table {
+      margin: 0px 150px;
+      min-width: 800px;
+      border: 1px solid #E6BDBD; 
+    }
+    .example_table, .example_table tr{
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #E6BDBD;
+    }
+    .example_table td, .example_table th {
+      padding: 5px 10px;
+      font-size: 12px;
+      font-family: Verdana;
+      color: #B16A68;
+     /* width: 15%;*/
+      height: 45px;
+      font-size: 15px;
+      text-align:center;
+    }
+    .example_table tr:nth-child(even) {
+      background: #EED3D2;
+      font-color:#FFF;
+    }
+    .example_table tr:nth-child(odd) {
+      background: #FFF;
+    }
+    .example_table button {
+      border-radius: 4px;
+      border: 1px solid transparent;
+      color: #B16A68;
+      background-color: #fff;
+      border-color: #ccc;
+      cursor:pointer;
+    }
+    .example_table tr:nth-child(odd) button {
+      background-color: #B16A68;
+      color: fff;
+    }
+  </style>
+
+  <div>
+    <p>Victoria's Secret - Tagging Test</p>
+    <button id="button">click</button>
+  </div>
+
+  <table class="example_table">
+   <tr>
+      <th>No.</th>
+      <th>EventName</th>
+      <th>Category</th>
+      <th>Action</th>
+      <th style="width:10%;">Label</th>
+      <th>Batch</th>
+      <th>Check</th>
+    </tr>
+ <l:iterate><!-- ergodic data set and generate row number-->
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Header Click</td>
+      <td>homepage</td>
+      <td>header</td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.header_click()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Footer Navigation Click</td>
+      <td>homepage</td>
+      <td>footer</td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.footer_navigation_click()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>First Navigation Click</td>
+      <td>homepage</td>
+      <td>navigation</td>
+      <td>firstnav-文胸</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.first_navigation_click()">click</button></td>
+    </tr>
+	<tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Second Navigation Click</td>
+      <td>homepage</td>
+      <td>navigation</td>
+      <td>secnav-内裤-款式-半包臀内裤</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.second_navigation_click()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Category Clicks</td>
+      <td>homepage</td>
+      <td>kv</td>
+      <td>dream angels wicked</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_category_click()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Click</td>
+      <td>product detail page</td>
+      <td>section-精选搭配</td>
+      <td>quick view</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_click()">click</button></td>
+    </tr>
+	<tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Search</td>
+      <td>homepage</td>
+      <td>search</td>
+      <td>黑色文胸</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_search()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Register</td>
+      <td>account</td>
+      <td>register</td>
+      <td>success</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.register()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>User Logout</td>
+      <td>account</td>
+      <td>logout</td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.user_logout()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Online Chat Conversation Start</td>
+      <td>chat</td>
+      <td>start</td>
+      <td>header</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.online_chat_conversation_start()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+	  <td>Search No Result</td>
+      <td>search no result page</td>
+      <td>search no result</td>
+      <td>ABCDEFG</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.search_no_result()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Filter</td>
+      <td>product filter</td>
+      <td>文胸</td>
+      <td>款式-3|4罩杯</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_filter()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Add to Shopping Cart</td>
+      <td>ecommerce</td>
+      <td>add to cart</td>
+      <td>quick view</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.add_to_shopping_cart()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Remove from Shopping Cart</td>
+      <td>ecommerce</td>
+      <td>remove from cart</td>
+      <td>shopping cart</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.remove_from_shopping_cart()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Checkout - Order Submit</td>
+      <td>ecommerce</td>
+      <td>order submit</td>
+      <td>member</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.checkout_order_submit()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Payment Successful</td>
+      <td>ecommerce</td>
+      <td>successful transaction</td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.payment_successful()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Payment Unsuccessful</td>
+      <td>ecommerce</td>
+      <td>fail transaction</td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.payment_unsuccessful()">click</button></td>
+    </tr>
+	<tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Ecommerce - Refund and Return Confirm</td>
+      <td>ecommerce</td>
+      <td>refund</td>
+      <td>不想要了</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.refund_and_return_confirm()">click</button></td>
+    </tr>
+    </l:iterate>  
+  </table>
+
+
+  <table class="example_table">
+    <tr>
+      <th>No.</th>
+      <th>EventName</th>
+      <th>Category</th>
+      <th>Action</th>
+      <th style="width:10%;">Label</th>
+      <th>Batch</th>
+      <th>Check</th>
+    </tr>
+  </table>
+</body>
