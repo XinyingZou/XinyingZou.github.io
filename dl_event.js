@@ -145,7 +145,7 @@ ga_vs_tracking.online_chat_conversation_start =  function() {
 }
 
 //category == search
-ga_vs_tracking.search_no_results =  function() {
+ga_vs_tracking.search_no_results = function() {
   window.dataLayer.push({
      'event': 'GA-event',
      'eventDetail': { 
