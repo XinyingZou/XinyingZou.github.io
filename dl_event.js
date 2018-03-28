@@ -253,10 +253,11 @@ ga_vs_tracking.payment_successful = function() {
       'action': 'successful transaction',
       'label': undefined
     },
+	var t=Math.random().toString(18).substr(7);	  
     'ecommerce': {
 		'purchase': {
 			'actionField': {
-				'id': 'T123456',
+				'id': t,
 				'affiliation': 'alipay',
 				'revenue': 1020,
 				'shipping': 20,
