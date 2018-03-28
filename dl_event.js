@@ -67,7 +67,7 @@ ga_vs_tracking.product_click =  function() {
   window.dataLayer.push({
       'event': 'GA-event',
       'eventDetail': { 
-        'category': 'product detail page', 
+        'category': 'product detail', 
         'action': 'section-精选搭配',
         'label': 'quick view'
       },
@@ -80,7 +80,6 @@ ga_vs_tracking.product_click =  function() {
                  'brand': 'pink',
                  'category': '文胸',
                  'variant': '黑色|36B',
-                 'quantity': 1
              }]
 		}
 	}
