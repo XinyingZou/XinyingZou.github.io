@@ -1,5 +1,5 @@
 var ga_vs_tracking = [];
-
+var t=Math.random().toString(18).substr(7);
 //category == homepage
 ga_vs_tracking.header_click = function(){
   var dataLayerLen = window.dataLayer.length;
@@ -252,8 +252,7 @@ ga_vs_tracking.payment_successful = function() {
       'category': 'ecommerce', 
       'action': 'successful transaction',
       'label': undefined
-    },
-	var t=Math.random().toString(18).substr(7);	  
+    },	  
     'ecommerce': {
 		'purchase': {
 			'actionField': {
