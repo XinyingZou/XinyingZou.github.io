@@ -40,7 +40,7 @@ ga_vs_tracking.first_navigation_click = function() {
     'eventDetail': { 
       'category': arr[index],  
       'action': 'navigation',
-      'label': 'arr2[index2]
+      'label': arr2[index2]
     },
 	'ecommerce': undefined
  });
