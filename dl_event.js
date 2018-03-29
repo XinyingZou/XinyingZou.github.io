@@ -3,18 +3,19 @@ var t=Math.random().toString(18).substr(7);
 //category == homepage
 ga_vs_tracking.header_click = function(){
   var dataLayerLen = window.dataLayer.length;
-  console.log(dataLayerLen)
+  console.log(dataLayerLen);
+  var arr = ['homepage','product detail','product list'];
+  var index = Math.floor((Math.random()*arr.length)); 
   window.dataLayer.push({
       'event': 'GA-event',
       'eventDetail': {
-        'category': 'homepage', 
+        'category': arr[index], 
         'action': 'header',
         'label': undefined
       },
 	  'ecommerce': undefined
    });
 };
-
 ga_vs_tracking.footer_navigation_click = function() {
   window.dataLayer.push({
     'event': 'GA-event',
