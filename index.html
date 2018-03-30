@@ -185,7 +185,7 @@
     </tr>
     <tr>
       <td><script>document.write(i);i++</script></td>  
-	  <td>Search No Results</td>
+      <td>Search No Results</td>
       <td>search no results</td>
       <td>no results</td>
       <td>['ABCDEFG','运动长裤','大秀手袋']</td>
@@ -209,6 +209,21 @@
       <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
       <td></td>
       <td><button onclick="ga_vs_tracking.product_filter_mobile()">click</button></td>
+    </tr>
+    </l:iterate>  
+  </table>
+	      
+  <table class="example_table">
+   <tr>
+      <th>No.</th>
+      <th>EventName</th>
+      <th>Category</th>
+      <th>Action</th>
+      <th style="width:10%;">Label</th>
+      <th>Batch</th>
+      <th>Check</th>
+    </tr>
+ <l:iterate><!-- ergodic data set and generate row number-->
     </tr>
     <tr>
       <td><script>document.write(i);i++</script></td>  
@@ -264,6 +279,5 @@
       <td></td>
       <td><button onclick="ga_vs_tracking.refund_and_return_confirm()">click</button></td>
     </tr>
-    </l:iterate>  
   </table>
 </body>
