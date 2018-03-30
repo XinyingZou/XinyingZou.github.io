@@ -187,7 +187,7 @@ ga_vs_tracking.search_no_results = function() {
 }
 
 //category == product filter
-ga_vs_tracking.product_filter =  function() {
+ga_vs_tracking.product_filter_pc =  function() {
   var arr = ['文胸','内裤','舒适睡衣'];
   var index = Math.floor((Math.random()*arr.length));
   var arr2 = ['款式-3|4罩杯','颜色-黑色','颜色-条纹']
@@ -202,7 +202,35 @@ ga_vs_tracking.product_filter =  function() {
 	  'ecommerce': undefined
    });
 }
-
+ga_vs_tracking.product_filter_mobile = function(){
+   window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'product filter', 
+        'action': '文胸',
+        'label': '款式-3|4罩杯'
+      },
+	  'ecommerce': undefined
+   });
+    window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'product filter', 
+        'action': '文胸',
+        'label': '款式-黑色'
+      },
+	  'ecommerce': undefined
+   });
+    window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'product filter', 
+        'action': '文胸',
+        'label': '款式-条纹'
+      },
+	  'ecommerce': undefined
+   });
+}
 //category == ecommerce
 ga_vs_tracking.add_to_shopping_cart =  function() {
   var arr = ['quick view','quick view-猜您喜欢','product detail'];
