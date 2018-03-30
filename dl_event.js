@@ -121,8 +121,8 @@ ga_vs_tracking.product_search = function() {
     'event': 'GA-event',
     'eventDetail': { 
         'category': arr[index],
-        'action': arr2[index2],
-        'label': '黑色文胸'
+        'action': 'search',
+        'label': arr2[index2]
     },
 	'ecommerce': undefined
  });
