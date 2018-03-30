@@ -1,5 +1,10 @@
 var ga_vs_tracking = [];
 var t=Math.random().toString(18).substr(7);
+var productname = ['甄选系列0065文胸','加强版聚拢0088文胸','复古蕾丝聚拢0022文胸'];
+var productid = ['232353','534388','895422'];
+var productprice = [500,600,300];
+var productcategory = ['文胸','聚拢','蕾丝'];
+var productindex = Math.floor((Math.random()*arr2.length));
 //category == homepage
 ga_vs_tracking.header_click = function(){
   var dataLayerLen = window.dataLayer.length;
@@ -95,11 +100,11 @@ ga_vs_tracking.product_click =  function() {
 	  'ecommerce': {
         'click': {
              'products': [{
-                 'name': '甄选系列0065文胸',
-                 'id': '123456',
-                 'price': 499,
+                 'name': productname[productindex],
+                 'id': productid[productindex],
+                 'price': productprice[productindex],
                  'brand': 'pink',
-                 'category': '文胸',
+                 'category': productcategory[productindex],
                  'variant': '黑色|36B',
              }]
 		}
@@ -245,11 +250,11 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 	  'ecommerce': {
 		  'add' : {
 			  'products': [{
-				  'name': '甄选系列0065文胸',
-				  'id': '123456',
-				  'price': 499,
-				  'brand': 'pink',
-				  'category': '文胸',
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
 				  'variant': '黑色|36B',
 				  'quantity': 1
 			  }]
@@ -269,11 +274,11 @@ ga_vs_tracking.remove_from_shopping_cart =  function() {
 	  'ecommerce': {
 		  'remove': {
 			  'products': [{
-				  'name': '甄选系列0065文胸',
-				  'id': '123456',
-				  'price': 499,
-				  'brand': 'pink',
-				  'category': '文胸',
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
 				  'variant': '黑色|36B',
 				  'quantity': 1
 			  }]
@@ -296,13 +301,13 @@ ga_vs_tracking.checkout_order_submit =  function() {
 		  'checkout': {
 			  'actionField': {'step': 1, 'option': 'order submit'},
 			  'products': [{
-                 'name': '甄选系列0065文胸',
-                 'id': '123456',
-                 'price': 499,
-                 'brand': 'pink',
-                 'category': '文胸',
-                 'variant': '黑色|36B',
-                 'quantity': 1
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
+              			  'variant': '黑色|36B',
+              			  'quantity': 3
              }]
 		  }
 	  }
@@ -327,14 +332,14 @@ ga_vs_tracking.payment_successful = function() {
 				'coupon': '345678'
 			},
 			'products': [{
-                 'name': '甄选系列0065文胸',
-                 'id': '123456',
-                 'price': 500,
-                 'brand': 'pink',
-                 'category': '文胸',
-                 'variant': '黑色|36B',
-                 'quantity': 2,
-                 'coupon': '85466876'
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
+               			  'variant': '黑色|36B',
+               			  'quantity': 3,
+               			  'coupon': '85466876'
              }]
 		}
 	}
