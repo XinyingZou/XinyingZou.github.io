@@ -163,7 +163,7 @@ ga_vs_tracking.user_logout =  function() {
 
 //category == chat
 ga_vs_tracking.online_chat_conversation_start =  function() {
-  var arr = ['homepage','product detail','product list'];
+  var arr = ['header','footer','product detail'];
   var index = Math.floor((Math.random()*arr.length));
   window.dataLayer.push({
     'event': 'GA-event',
