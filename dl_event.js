@@ -4,7 +4,7 @@ var productname = ['甄选系列0065文胸','加强版聚拢0088文胸','复古�
 var productid = ['232353','534388','895422'];
 var productprice = [500,600,300];
 var productcategory = ['文胸','聚拢','蕾丝'];
-var productindex = Math.floor((Math.random()*arr2.length));
+var productindex = Math.floor(Math.random()*3);
 //category == homepage
 ga_vs_tracking.header_click = function(){
   var dataLayerLen = window.dataLayer.length;
