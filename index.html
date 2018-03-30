@@ -6,7 +6,7 @@
     dataLayer.push({
       'user': {
         'id': undefined,
-        'group': undefined
+        'group': 'guest'
       }
     });
   </script>
@@ -194,12 +194,21 @@
     </tr>
     <tr>
       <td><script>document.write(i);i++</script></td>  
-      <td>Product Filter</td>
+      <td>Product Filter(PC)</td>
       <td>product filter</td>
       <td>['文胸','内裤','舒适睡衣']</td>
       <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
       <td></td>
-      <td><button onclick="ga_vs_tracking.product_filter()">click</button></td>
+      <td><button onclick="ga_vs_tracking.product_filter_pc()">click</button></td>
+    </tr>
+    <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Filter(Mobile)</td>
+      <td>product filter</td>
+      <td>文胸</td>
+      <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_filter_mobile()">click</button></td>
     </tr>
     <tr>
       <td><script>document.write(i);i++</script></td>  
