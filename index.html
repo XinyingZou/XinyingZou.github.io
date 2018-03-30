@@ -1,7 +1,5 @@
 <html>  
 <head>
-  <script src="underscore-min.js"></script>
-  <script src="jquery.min.js"></script>
   <script src="dl_event.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,9 +7,6 @@
       'user': {
         'id': undefined,
         'group': undefined
-      },
-      'site': {
-        'language': 'cn'
       }
     });
   </script>
@@ -261,18 +256,5 @@
       <td><button onclick="ga_vs_tracking.refund_and_return_confirm()">click</button></td>
     </tr>
     </l:iterate>  
-  </table>
-
-
-  <table class="example_table">
-    <tr>
-      <th>No.</th>
-      <th>EventName</th>
-      <th>Category</th>
-      <th>Action</th>
-      <th style="width:10%;">Label</th>
-      <th>Batch</th>
-      <th>Check</th>
-    </tr>
   </table>
 </body>
