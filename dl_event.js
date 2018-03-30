@@ -211,8 +211,8 @@ ga_vs_tracking.product_filter_mobile = function(){
         'label': '款式-3|4罩杯'
       },
 	  'ecommerce': undefined
-   });
-    window.dataLayer.push({
+   },
+   {
      'event': 'GA-event',
      'eventDetail': { 
         'category': 'product filter', 
@@ -220,8 +220,8 @@ ga_vs_tracking.product_filter_mobile = function(){
         'label': '款式-黑色'
       },
 	  'ecommerce': undefined
-   });
-    window.dataLayer.push({
+   },
+   {
      'event': 'GA-event',
      'eventDetail': { 
         'category': 'product filter', 
