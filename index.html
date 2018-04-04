@@ -1,6 +1,7 @@
 <html>  
 <head>
   <script src="dl_event.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
@@ -84,7 +85,7 @@
     <button id="button">click</button>
   </div>
 
- <table class="example_table">
+ <table class="example_table" id="table_1">
    <tr>
       <th>No.</th>
       <th>EventName</th>
@@ -94,71 +95,104 @@
       <th>Batch</th>
       <th>Check</th>
     </tr>
- <l:iterate><!-- ergodic data set and generate row number-->
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Header Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>header</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.header_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Footer Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>footer</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.footer_navigation_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>First Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>navigation</td>
-      <td>['firstnav-文胸','firstnav-内裤','firstnav-舒适睡衣']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.first_navigation_click()">click</button></td>
-    </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Second Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>navigation</td>
-      <td>['secnav-内裤-款式-半包臀内裤','secnav-文胸-all','secnav-文胸-效果-超薄']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.second_navigation_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Category Clicks</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>['kv','section','今日特惠']</td>
-      <td>dream angels wicked</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_category_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>['kv','section','今日特惠']</td>
-      <td>['quick view','normal']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_click()">click</button></td>
-    </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Search</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>search</td>
-      <td>['黑色文胸','运动文胸','条纹睡衣']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_search()">click</button></td>
-    </tr>
+	<l:iterate>
+	<script>
+	var pageNames = ['homepage','product detail','product list'];
+	var firstNavigationLabels = ['firstnav-文胸','firstnav-内裤','firstnav-舒适睡衣'];
+	var clickPositions = ['kv','section','今日特惠'];
+	var secondNavigationLabels = ['secnav-内裤-款式-半包臀内裤','secnav-文胸-all','secnav-文胸-效果-超薄'];
+	var viewMode = ['quick view','normal'];
+	var searchCriteria = ['黑色文胸','运动文胸','条纹睡衣'];
+	for (j=0;j<pageNames.length;j++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Header Click</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>header</td>"+
+      "<td></td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.header_click('" + pageNames[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	for (j=0;j<pageNames.length;j++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Footer Navigation Click</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>footer</td>"+
+      "<td></td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.footer_navigation_click('" + pageNames[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	for (j=0;j<pageNames.length;j++) {
+		for (k=0;k<firstNavigationLabels.length;k++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>First Navigation Click</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>navigation</td>"+
+      "<td>" + firstNavigationLabels[k] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.first_navigation_click('" + pageNames[j] + "','" + firstNavigationLabels[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+	for (j=0;j<pageNames.length;j++) {
+		for (k=0;k<secondNavigationLabels.length;k++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Second Navigation Click</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>navigation</td>"+
+      "<td>" + secondNavigationLabels[k] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.second_navigation_click('" + pageNames[j] + "','" + secondNavigationLabels[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+	for (j=0;j<pageNames.length;j++) {
+		for (k=0;k<clickPositions.length;k++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Product Category Clicks</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>" + clickPositions[k] + "</td>"+
+      "<td>dream angels wicked</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.product_category_click('" + pageNames[j] + "','" + clickPositions[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+	for (j=0;j<pageNames.length;j++) {
+		for (k=0;k<clickPositions.length;k++) {
+			for (l=0;l<viewMode.length;l++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Product Click</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>" + clickPositions[k] + "</td>"+
+      "<td>" + viewMode[l] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.product_click('" + pageNames[j] + "','" + clickPositions[k] + "','" + viewMode[l] + "')\">click</button></td>"+
+	  "</tr>");
+			}
+		}
+	}
+    for (j=0;j<pageNames.length;j++) {
+		for (k=0;k<searchCriteria.length;k++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Product Search</td>"+
+      "<td>" + pageNames[j] + "</td>"+
+      "<td>search</td>"+
+      "<td>" + searchCriteria[k] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.product_search('" + pageNames[j] + "','" + searchCriteria[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+  </script>
     <tr>
       <td><script>document.write(i);i++</script></td>  
       <td>Register</td>
@@ -177,34 +211,49 @@
       <td></td>
       <td><button onclick="ga_vs_tracking.user_logout()">click</button></td>
     </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Online Chat Conversation Start</td>
-      <td>chat</td>
-      <td>start</td>
-      <td>['header','footer','product detail']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.online_chat_conversation_start()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Search No Results</td>
-      <td>search no results</td>
-      <td>no results</td>
-      <td>['ABCDEFG','运动长裤','大秀手袋']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.search_no_results()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Filter(PC)</td>
-      <td>product filter</td>
-      <td>['文胸','内裤','舒适睡衣']</td>
-      <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_filter_pc()">click</button></td>
-    </tr>
-    <tr>
+	<l:iterate>
+	<script>
+	var chatPositions = ['header','footer','product detail'];
+	var keywords = ['ABCDEFG','运动长裤','大秀手袋'];
+	var filterTargets = ['文胸','内裤','舒适睡衣'];
+	var filterCriteria = ['款式-3|4罩杯','颜色-黑色','颜色-条纹'];
+	for (j=0;j<chatPositions.length;j++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Online Chat Conversation Start</td>"+
+      "<td>chat</td>"+
+      "<td>start</td>"+
+      "<td>" + chatPositions[j] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.online_chat_conversation_start('" + chatPositions[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	for (j=0;j<keywords.length;j++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Search No Results</td>"+
+      "<td>search no results</td>"+
+      "<td>no results</td>"+
+      "<td>" + keywords[j] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.search_no_results('" + keywords[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	for (j=0;j<filterTargets.length;j++) {
+		for (k=0;k<filterCriteria.length;k++) {
+		$('#table_1').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Product Filter(PC)</td>"+
+      "<td>product filter</td>"+
+      "<td>" + filterTargets[j] + "</td>"+
+      "<td>" + filterCriteria[k] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.product_filter_pc('" + filterTargets[j] + "','" + filterCriteria[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+	</script>
+	<tr>
       <td><script>document.write(i);i++</script></td>  
       <td>Product Filter(Mobile)</td>
       <td>product filter</td>
@@ -217,9 +266,9 @@
   </table>
 
   <div>
-    <p> Category= Ecommerce </p>
+    <p> Category = Ecommerce </p>
   </div>
-  <table class="example_table">
+  <table class="example_table" id="table_2">
    <tr>
       <th>No.</th>
       <th>EventName</th>
@@ -229,17 +278,21 @@
       <th>Batch</th>
       <th>Check</th>
     </tr>
- <l:iterate><!-- ergodic data set and generate row number-->
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Add to Shopping Cart</td>
-      <td>ecommerce</td>
-      <td>add to cart</td>
-      <td>['quick view','quick view-猜您喜欢','product detail']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.add_to_shopping_cart()">click</button></td>
-    </tr>
+	<l:iterate>
+	<script>
+	var ecommercePositions = ['quick view','quick view-猜您喜欢','product detail'];
+	for (j=0;j<ecommercePositions.length;j++) {
+		$('#table_2').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Ecommerce - Add to Shopping Cart</td>"+
+      "<td>ecommerce</td>"+
+      "<td>add to cart</td>"+
+      "<td>" + ecommercePositions[j] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.add_to_shopping_cart('" + ecommercePositions[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	</script>
     <tr>
       <td><script>document.write(i);i++</script></td>  
       <td>Ecommerce - Remove from Shopping Cart</td>
@@ -249,15 +302,21 @@
       <td></td>
       <td><button onclick="ga_vs_tracking.remove_from_shopping_cart()">click</button></td>
     </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Checkout - Order Submit</td>
-      <td>ecommerce</td>
-      <td>order submit</td>
-      <td>['member','guest']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.checkout_order_submit()">click</button></td>
-    </tr>
+	<l:iterate>
+	<script>
+	var visitorTypes = ['member','guest'];
+	for (j=0;j<visitorTypes.length;j++) {
+		$('#table_2').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Ecommerce - Checkout - Order Submit</td>"+
+      "<td>ecommerce</td>"+
+      "<td>order submit</td>"+
+      "<td>" + visitorTypes[j] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.checkout_order_submit('" + visitorTypes[j] + "')\">click</button></td>"+
+	  "</tr>");
+	}
+	</script>
     <tr>
       <td><script>document.write(i);i++</script></td>  
       <td>Ecommerce - Payment Successful</td>
@@ -276,14 +335,23 @@
       <td></td>
       <td><button onclick="ga_vs_tracking.payment_unsuccessful()">click</button></td>
     </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Refund and Return Confirm</td>
-      <td>ecommerce</td>
-      <td>['refund','return']</td>
-      <td>['不想要了','尺码不合适']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.refund_and_return_confirm()">click</button></td>
-    </tr>
+	<l:iterate>
+	<script>
+	var types = ['refund','return'];
+	var reasons = ['不想要了','尺码不合适'];
+	for (j=0;j<types.length;j++) {
+		for (k=0;k<reasons.length;k++) {
+		$('#table_2').append("<tr>"+
+      "<td>" + (i++) + "</td>"+
+      "<td>Ecommerce - Refund and Return Confirm</td>"+
+      "<td>ecommerce</td>"+
+      "<td>" + types[j] + "</td>"+
+      "<td>" + reasons[k] + "</td>"+
+      "<td></td>"+
+      "<td><button onclick=\"ga_vs_tracking.refund_and_return_confirm('" + types[j] + "','" + reasons[k] + "')\">click</button></td>"+
+	  "</tr>");
+		}
+	}
+	</script>
   </table>
 </body>
