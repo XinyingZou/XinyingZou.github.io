@@ -86,7 +86,7 @@ ga_va_tracking.pageview_click = function() {
    window.dataLayer.push({
        'event':'GA-event',
         'eventDetail':{
-	 category': undefined,
+	'category': undefined,
         'action': undefined,
         'label': undefined
 	},
