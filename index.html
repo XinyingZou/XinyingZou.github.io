@@ -143,15 +143,6 @@
     </tr>
     <tr>
       <td><script>document.write(i);i++</script></td>  
-      <td>Product Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>['kv','section','今日特惠']</td>
-      <td>['quick view','normal']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_click()">click</button></td>
-    </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
       <td>Product Search</td>
       <td>['homepage','product detail','product list']</td>
       <td>search</td>
@@ -215,7 +206,6 @@
     </tr>
     </l:iterate>  
   </table>
-
   <div>
     <p> Category= Ecommerce </p>
   </div>
@@ -230,7 +220,24 @@
       <th>Check</th>
     </tr>
  <l:iterate><!-- ergodic data set and generate row number-->
-    </tr>
+      <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>PageView</td>
+      <td>homepage</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.pageview_click()">click</button></td>
+    </tr>	      
+      <tr>
+      <td><script>document.write(i);i++</script></td>  
+      <td>Product Click</td>
+      <td>homepage</td>
+      <td>['kv','section','今日特惠']</td>
+      <td>['quick view','normal']</td>
+      <td></td>
+      <td><button onclick="ga_vs_tracking.product_click()">click</button></td>
+    </tr>      
     <tr>
       <td><script>document.write(i);i++</script></td>  
       <td>Ecommerce - Add to Shopping Cart</td>
