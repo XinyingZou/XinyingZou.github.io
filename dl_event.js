@@ -92,7 +92,7 @@ ga_va_tracking.pageview_click = function() {
 	},
 	 'ecommerce': undefined
    });
-   
+   console.log("page view");
 }
 ga_vs_tracking.product_click =  function() {
   var arr2 = ['kv','section','今日特惠'];
