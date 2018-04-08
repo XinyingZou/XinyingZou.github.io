@@ -82,7 +82,7 @@ ga_vs_tracking.product_category_click = function() {
 	'ecommerce': undefined
  });
 }
-ga_va_tracking.pageview_click = function() {
+ga_vs_tracking.pageview_click = function() {
    window.dataLayer.push({
        'event':'GA-event',
         'eventDetail':{
