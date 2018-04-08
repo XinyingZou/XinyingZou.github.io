@@ -247,7 +247,6 @@ ga_vs_tracking.product_filter_mobile = function(){
 }
 //category == ecommerce
 ga_vs_tracking.add_to_shopping_cart =  function() {
-  string atclabel = arr[index];
     window.dataLayer.push({
      'event': 'GA-event',
      'eventDetail': { 
