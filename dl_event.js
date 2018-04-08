@@ -92,6 +92,7 @@ ga_vs_tracking.pageview_click = function() {
 	},
 	 'ecommerce': undefined
    });
+   window.open("https://xinyingzou.github.io/");
    console.log("page view");
 }
 ga_vs_tracking.product_click =  function() {
