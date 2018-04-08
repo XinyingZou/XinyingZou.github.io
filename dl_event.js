@@ -249,8 +249,8 @@ ga_vs_tracking.product_filter_mobile = function(){
 ga_vs_tracking.add_to_shopping_cart =  function() {
   var arr = ['quick view','quick view-猜您喜欢','product detail'];
   var index = Math.floor((Math.random()*arr.length));
-  string atclabel=arr[index];
-  if(actlabel = 'product detail'){
+  string atclabel = arr[index];
+  if(actlabel = "product detail"){
     window.dataLayer.push({
      'event': 'GA-event',
      'eventDetail': { 
