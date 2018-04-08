@@ -286,7 +286,29 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 	  }
    });
 }
-
+ga_vs_tracking.add_to_shopping_cart_pd=  function() {
+    window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'ecommerce', 
+        'action': 'add to cart',
+        'label': 'product detail'
+      },
+	  'ecommerce': {		
+		  'add' : {
+			  'products': [{
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
+				  'variant': '黑色|36B',
+				  'quantity': 1
+			  }]
+		  }
+	  }
+    });
+}
 ga_vs_tracking.remove_from_shopping_cart =  function() {
   window.dataLayer.push({
      'event': 'GA-event',
