@@ -247,18 +247,26 @@ ga_vs_tracking.product_filter_mobile = function(){
 }
 //category == ecommerce
 ga_vs_tracking.add_to_shopping_cart =  function() {
-  var arr = ['quick view','quick view-猜您喜欢','product detail'];
-  var index = Math.floor((Math.random()*arr.length));
   string atclabel = arr[index];
-  if(actlabel = "product detail"){
     window.dataLayer.push({
      'event': 'GA-event',
      'eventDetail': { 
         'category': 'ecommerce', 
         'action': 'add to cart',
-        'label': actlabel
+        'label': 'quick view'
       },
 	  'ecommerce': {
+		 'detail' :{
+			 'products': [{
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
+				  'variant': '黑色|36B',
+				  'quantity': 1
+			  }] 
+		  },
 		  'add' : {
 			  'products': [{
 				  'name': productname[productindex],
@@ -272,51 +280,6 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 		  }
 	  }
    });
-  }
-  else{
-    window.dataLayer.push({
-     'event': 'GA-event',
-     'eventDetail': { 
-        'category': 'ecommerce', 
-        'action': 'add to cart',
-        'label': actlabel
-      },
-	  'ecommerce': {
-		  'add' : {
-			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
-			  }]
-		  }
-	  }
-   });
-   window.dataLayer.push({
-     'event': 'GA-event',
-     'eventDetail': { 
-        'category': 'ecommerce', 
-        'action': 'add to cart',
-        'label': actlabel
-      },
-	  'ecommerce': {
-		  'add' : {
-			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
-			  }]
-		  }
-	  }
-   });
-  }
 }
 
 ga_vs_tracking.remove_from_shopping_cart =  function() {
