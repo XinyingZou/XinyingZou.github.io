@@ -271,11 +271,6 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
     });
     window.dataLayer.push({
      'event': 'GA-event',
-      'eventDetail': { 
-        'category': 'ecommerce', 
-        'action': 'add to cart',
-        'label': 'quick view'
-      },
 	  'ecommerce':{
 	   'detail' :{
 			 'products': [{
