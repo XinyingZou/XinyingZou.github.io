@@ -254,18 +254,7 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
         'action': 'add to cart',
         'label': 'quick view'
       },
-	  'ecommerce': {
-		 'detail' :{
-			 'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
-			  }] 
-		  },
+	  'ecommerce': {		
 		  'add' : {
 			  'products': [{
 				  'name': productname[productindex],
@@ -276,6 +265,19 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 				  'variant': '黑色|36B',
 				  'quantity': 1
 			  }]
+		  }
+	  },
+	  'ecommerce':{
+	   'detail' :{
+			 'products': [{
+				  'name': productname[productindex],
+                 		  'id': productid[productindex],
+               			  'price': productprice[productindex],
+               			  'brand': 'pink',
+               			  'category': productcategory[productindex],
+				  'variant': '黑色|36B',
+				  'quantity': 1
+			  }] 
 		  }
 	  }
    });
