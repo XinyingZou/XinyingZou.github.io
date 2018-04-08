@@ -252,7 +252,7 @@ ga_vs_tracking.product_view  =  function() {
      'event': 'GA-event',
      'eventDetail': { 
         'category': 'ecommerce', 
-        'action': 'product view,
+        'action': 'product view',
         'label': 'product detail'
       },
 	  'ecommerce': {		
