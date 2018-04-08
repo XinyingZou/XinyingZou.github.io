@@ -82,10 +82,19 @@ ga_vs_tracking.product_category_click = function() {
 	'ecommerce': undefined
  });
 }
-
+ga_va_tracking.pageview_click = function() {
+   window.dataLayer.push({
+       'event':'GA-event',
+        'eventDetail':{
+	 category': undefined,
+        'action': undefined,
+        'label': undefined
+	},
+	 'ecommerce': undefined
+   });
+   
+}
 ga_vs_tracking.product_click =  function() {
-  var arr = ['homepage','product detail','product list'];
-  var index = Math.floor((Math.random()*arr.length));
   var arr2 = ['kv','section','今日特惠'];
   var index2 = Math.floor((Math.random()*arr2.length));
   var arr3 = ['quick view','normal'];
@@ -93,7 +102,7 @@ ga_vs_tracking.product_click =  function() {
   window.dataLayer.push({
       'event': 'GA-event',
       'eventDetail': { 
-        'category': arr[index],
+        'category': 'homepage',
         'action': arr2[index2],
         'label': arr3[index3]
       },
