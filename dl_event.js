@@ -279,7 +279,7 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 	  }
     });
 }
-ga_vs_tracking.add_to_shopping_cart_qv =  function() {
+ga_vs_tracking.add_to_shopping_cart_pv =  function() {
     window.dataLayer.push({
      'event': 'GA-event',
      'eventDetail': { 
