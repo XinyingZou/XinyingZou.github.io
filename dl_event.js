@@ -97,12 +97,12 @@ ga_vs_tracking.product_click =  function() {
 	  'ecommerce': {
         'click': {
              'products': [{
-                 'name': productname[productindex],
-                 'id': productid[productindex],
-                 'price': productprice[productindex],
-                 'brand': 'pink',
-                 'category': productcategory[productindex],
-                 'variant': '黑色|36B',
+                'name': '甄选系列0066文胸',
+		'id': '234567', 
+		'price': 399, 
+		'brand': 'pink',
+		'category': '文胸', 
+		'variant': '条纹|37B'
              }]
 		}
 	}
@@ -245,7 +245,7 @@ ga_vs_tracking.product_view  =  function() {
 	  'ecommerce': {		
 		  'detail' : {
 			  'products': [{
-				 name': '甄选系列0066文胸',
+				 'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -267,7 +267,7 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 	  'ecommerce': {		
 		  'add' : {
 			  'products': [{
-				 name': '甄选系列0066文胸',
+				 'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -290,7 +290,7 @@ ga_vs_tracking.add_to_shopping_cart_qv =  function() {
 	  'ecommerce': {		
 		  'detail' : {
 			  'products': [{
-				name': '甄选系列0066文胸',
+				'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -310,7 +310,7 @@ ga_vs_tracking.add_to_shopping_cart_qv =  function() {
 	  'ecommerce': {		
 		  'detail' : {
 			  'products': [{
-				name': '甄选系列0066文胸',
+				'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -334,7 +334,7 @@ ga_vs_tracking.remove_from_shopping_cart =  function() {
 	  'ecommerce': {
 		  'remove': {
 			  'products': [{
-				 name': '甄选系列0066文胸',
+				 'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -361,7 +361,7 @@ ga_vs_tracking.checkout_order_submit =  function() {
 		  'checkout': {
 			  'actionField': {'step': 1, 'option': 'order submit'},
 			  'products': [{
-				  name': '甄选系列0066文胸',
+				 'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
@@ -392,7 +392,7 @@ ga_vs_tracking.payment_successful = function() {
 				'coupon': '345678'
 			},
 			'products': [{
-				 name': '甄选系列0066文胸',
+				 'name': '甄选系列0066文胸',
 				 'id': '234567', 
 				 'price': 399, 
 				 'brand': 'pink',
