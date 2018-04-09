@@ -82,19 +82,6 @@ ga_vs_tracking.product_category_click = function() {
 	'ecommerce': undefined
  });
 }
-ga_vs_tracking.pageview_click = function() {
-   window.dataLayer.push({
-       'event':'GA-event',
-        'eventDetail':{
-	'category': undefined,
-        'action': undefined,
-        'label': undefined
-	},
-	 'ecommerce': undefined
-   });
-   window.open("https://xinyingzou.github.io/");
-   console.log("page view");
-}
 ga_vs_tracking.product_click =  function() {
   var arr2 = ['kv','section','今日特惠'];
   var index2 = Math.floor((Math.random()*arr2.length));
@@ -258,12 +245,12 @@ ga_vs_tracking.product_view  =  function() {
 	  'ecommerce': {		
 		  'detail' : {
 			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B'
+				 name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B'
 			  }]
 		  }
 	  }
@@ -280,18 +267,62 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 	  'ecommerce': {		
 		  'add' : {
 			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
+				 name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B',
+				 'quantity': 1
 			  }]
 		  }
 	  }
     });
 }
+ga_vs_tracking.add_to_shopping_cart_qv =  function() {
+    window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'ecommerce', 
+        'action': 'product view',
+        'label': 'quick view'
+      },
+	  'ecommerce': {		
+		  'detail' : {
+			  'products': [{
+				name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B'
+			  }]
+		  }
+	  }
+    });
+    window.dataLayer.push({
+     'event': 'GA-event',
+     'eventDetail': { 
+        'category': 'ecommerce', 
+        'action': 'add to cart',
+        'label': 'quick view'
+      },
+	  'ecommerce': {		
+		  'detail' : {
+			  'products': [{
+				name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B',
+				 'quantity': 1
+			  }]
+		  }
+	  }
+    });
+}
+
 ga_vs_tracking.remove_from_shopping_cart =  function() {
   window.dataLayer.push({
      'event': 'GA-event',
@@ -303,13 +334,13 @@ ga_vs_tracking.remove_from_shopping_cart =  function() {
 	  'ecommerce': {
 		  'remove': {
 			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
+				 name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B',
+				 'quantity': 1
 			  }]
 		  }
 	  }
@@ -330,13 +361,13 @@ ga_vs_tracking.checkout_order_submit =  function() {
 		  'checkout': {
 			  'actionField': {'step': 1, 'option': 'order submit'},
 			  'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-              			  'variant': '黑色|36B',
-              			  'quantity': 3
+				  name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B',
+				 'quantity': 1
              }]
 		  }
 	  }
@@ -356,19 +387,18 @@ ga_vs_tracking.payment_successful = function() {
 			'actionField': {
 				'id': t,
 				'affiliation': 'alipay',
-				'revenue': productprice[productindex]*3-20,
+				'revenue': 399*3-20,
 				'shipping': 20,
 				'coupon': '345678'
 			},
 			'products': [{
-				  'name': productname[productindex],
-                 		  'id': productid[productindex],
-               			  'price': productprice[productindex],
-               			  'brand': 'pink',
-               			  'category': productcategory[productindex],
-               			  'variant': '黑色|36B',
-               			  'quantity': 3,
-               			  'coupon': '85466876'
+				 name': '甄选系列0066文胸',
+				 'id': '234567', 
+				 'price': 399, 
+				 'brand': 'pink',
+				 'category': '文胸', 
+				 'variant': '条纹|37B',
+               			 'quantity': 3
              }]
 		}
 	}
