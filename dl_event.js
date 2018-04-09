@@ -387,8 +387,8 @@ ga_vs_tracking.payment_successful = function() {
 			'actionField': {
 				'id': t,
 				'affiliation': 'alipay',
-				'revenue': 399*3-20,
-				'shipping': 20,
+				'revenue': (399*3+0)*0.8,
+				'shipping': 0,
 				'coupon': '345678'
 			},
 			'products': [{
