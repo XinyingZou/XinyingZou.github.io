@@ -256,15 +256,14 @@ ga_vs_tracking.product_view  =  function() {
         'label': 'product detail'
       },
 	  'ecommerce': {		
-		  'add' : {
+		  'detail' : {
 			  'products': [{
 				  'name': productname[productindex],
                  		  'id': productid[productindex],
                			  'price': productprice[productindex],
                			  'brand': 'pink',
                			  'category': productcategory[productindex],
-				  'variant': '黑色|36B',
-				  'quantity': 1
+				  'variant': '黑色|36B'
 			  }]
 		  }
 	  }
@@ -276,7 +275,7 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
      'eventDetail': { 
         'category': 'ecommerce', 
         'action': 'add to cart',
-        'label': 'quick view'
+        'label': 'product detail'
       },
 	  'ecommerce': {		
 		  'add' : {
