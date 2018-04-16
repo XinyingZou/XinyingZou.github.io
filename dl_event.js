@@ -129,7 +129,7 @@ ga_vs_tracking.product_search = function() {
     },
 	'ecommerce': undefined
  });
-window._hmt.push(['_trackEvent', arr[index], 'search', arr2[index2]])		
+window._hmt.push(['_setCustomVar', 1, 'customer', arr2[index2], 3]);		
 }
 
 //category == account
@@ -414,7 +414,7 @@ ga_vs_tracking.payment_successful = function() {
 		}
 	}
  });
-    _hmt.push(['_trackOrder', {
+    window._hmt.push(['_trackOrder', {
                 "orderId": t,
                 "orderTotal": (399*3+0)*0.8,
                 "item": [
