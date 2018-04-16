@@ -129,7 +129,7 @@ ga_vs_tracking.product_search = function() {
     },
 	'ecommerce': undefined
  });
-window._hmt.push(['_setCustomVar', 1, 'customer', arr2[index2], 3]);		
+window._hmt.push(['_setCustomVar', 1, 'search', arr2[index2], 3]);		
 }
 
 //category == account
