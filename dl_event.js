@@ -20,7 +20,7 @@ ga_vs_tracking.header_click = function(){
       },
 	  'ecommerce': undefined
    });
- _hmt.push([‘_trackEvent’, category, action, opt_label,opt_value])	
+ _hmt.push(['_trackEvent', arr[index], 'header', '衣服'])	
 };
 ga_vs_tracking.footer_navigation_click = function() {
   var arr = ['homepage','product detail','product list'];
