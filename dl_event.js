@@ -20,7 +20,7 @@ ga_vs_tracking.header_click = function(){
       },
 	  'ecommerce': undefined
    });
- _hmt.push(['_trackEvent', arr[index], 'header', '衣服'])	
+ window._hmt.push(['_trackEvent', arr[index], 'header', '衣服'])	
 };
 ga_vs_tracking.footer_navigation_click = function() {
   var arr = ['homepage','product detail','product list'];
@@ -51,7 +51,7 @@ ga_vs_tracking.first_navigation_click = function() {
     },
 	'ecommerce': undefined
  });
- _hmt.push(['_trackEvent', arr[index], 'navigation', arr2[index2]])		
+ window._hmt.push(['_trackEvent', arr[index], 'navigation', arr2[index2]])		
 }
 
 ga_vs_tracking.second_navigation_click = function() {
@@ -68,7 +68,7 @@ ga_vs_tracking.second_navigation_click = function() {
     },
 	'ecommerce': undefined
  });
- _hmt.push(['_trackEvent', arr[index], 'navigation', arr2[index2]])	
+ window._hmt.push(['_trackEvent', arr[index], 'navigation', arr2[index2]])	
 }
 
 ga_vs_tracking.product_category_click = function() {
@@ -85,7 +85,7 @@ ga_vs_tracking.product_category_click = function() {
     },
 	'ecommerce': undefined
  });
- _hmt.push(['_trackEvent', arr[index], arr2[index2], 'dream angels wicked'])	
+ window._hmt.push(['_trackEvent', arr[index], arr2[index2], 'dream angels wicked'])	
 }
 ga_vs_tracking.product_click =  function() {
   var arr2 = ['kv','section','今日特惠'];
@@ -112,7 +112,7 @@ ga_vs_tracking.product_click =  function() {
 		}
 	}
    });
-   _hmt.push(['_trackEvent', 'homepage', arr2[index2], arr3[index3]])	
+   window._hmt.push(['_trackEvent', 'homepage', arr2[index2], arr3[index3]])	
 }
 
 ga_vs_tracking.product_search = function() {
@@ -129,7 +129,7 @@ ga_vs_tracking.product_search = function() {
     },
 	'ecommerce': undefined
  });
- _hmt.push(['_trackEvent', arr[index], 'search', arr2[index2]])		
+window._hmt.push(['_trackEvent', arr[index], 'search', arr2[index2]])		
 }
 
 //category == account
@@ -210,7 +210,7 @@ ga_vs_tracking.product_filter_pc =  function() {
       },
 	  'ecommerce': undefined
    });
-  _hmt.push(['_trackEvent', 'product filter', arr[index], arr2[index2]])	
+  window._hmt.push(['_trackEvent', 'product filter', arr[index], arr2[index2]])	
 }
 ga_vs_tracking.product_filter_mobile = function(){
    window.dataLayer.push({
@@ -263,7 +263,7 @@ ga_vs_tracking.product_view  =  function() {
 		  }
 	  }
     });
-     _hmt.push(['_trackEvent', 'ecommerce', 'product view', 'product detail'])		
+     window._hmt.push(['_trackEvent', 'ecommerce', 'product view', 'product detail'])		
 }
 ga_vs_tracking.add_to_shopping_cart =  function() {
     window.dataLayer.push({
@@ -287,7 +287,7 @@ ga_vs_tracking.add_to_shopping_cart =  function() {
 		  }
 	  }
     });
-    _hmt.push(['_trackEvent', 'ecommerce','add to cart', 'product detail'])		
+    window._hmt.push(['_trackEvent', 'ecommerce','add to cart', 'product detail'])		
 }
 ga_vs_tracking.add_to_shopping_cart_pv =  function() {
     window.dataLayer.push({
@@ -382,7 +382,7 @@ ga_vs_tracking.checkout_order_submit =  function() {
 		  }
 	  }
    });
-   _hmt.push(['_trackEvent', 'ecommerce','order submit', arr[index]])	
+   window._hmt.push(['_trackEvent', 'ecommerce','order submit', arr[index]])	
 }
 
 ga_vs_tracking.payment_successful = function() {
