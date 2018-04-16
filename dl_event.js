@@ -20,7 +20,7 @@ ga_vs_tracking.header_click = function(){
       },
 	  'ecommerce': undefined
    });
- window._hmt.push([‘_trackEvent’, category, action, opt_label,opt_value])	
+ _hmt.push([‘_trackEvent’, category, action, opt_label,opt_value])	
 };
 ga_vs_tracking.footer_navigation_click = function() {
   var arr = ['homepage','product detail','product list'];
