@@ -1,319 +1,181 @@
-<html> 
-<head> 
-  <meta property="wb:webmaster" content="6a62a6988736151d"/>
-  <script src="dl_event.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      'user': {
-        'id': undefined,
-        'group': 'guest'
-      },
-      'site':{
-        'brand':'victoria secret'
-      }
-    });
-  </script>
-    <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WXX3X2R');</script>
-      <!-- End Google Tag Manager -->
-<!--baidu tag-->	
- <script>
-	var _hmt = _hmt || [];
-	window._hmt.push(['_setCustomVar', 1, 'search', '好看', 3]);  
-	(function() {
- 	 	var hm = document.createElement("script");
-  		hm.src = "https://hm.baidu.com/hm.js?3f662efe24f00aa9d9886e6bb08cd1a0";
-  		var s = document.getElementsByTagName("script")[0]; 
-  		s.parentNode.insertBefore(hm, s);
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" >
+<title>程序员用HTML5制作的爱心树表白动画- 柯乐义</title><base target="_blank" href="http://keleyi.com/keleyi/phtml/html5/" /> 
+<link type="text/css" rel="stylesheet" href="http://keleyi.com/keleyi/phtml/html5/31/renxi/default.css">
+<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex.min.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex-parser.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex-jit.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex-builderbase.min.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex-async.min.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/jscex-async-powerpack.min.js"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/functions.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/html5/31/renxi/love.js" charset="utf-8"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #666666}
+-->
+</style>
+</head>
+<body>
+<div id="main">
+<div id="error"></div>
+<div id="wrap">
+<div id="text">
+<div id="code">
+<p> <font color="#FF0000"> <span class="say">亲爱的：</span><br>
+<span class="say"></span><br />
+<span class="say">曾经，</span><br>
+<span class="say">有一份真挚的爱情摆在我面前，</span><br />
+<span class="say">我没有珍惜，</span><br /> 
+<span class="say">等到我失去的时候才后悔莫及，</span><br>    
+<span class="say">人世间最痛苦的事莫过于此......</span><br>
+<span class="say">如果上天能够给我一个再来一次的机会，</span><br>
+<span class="say">我会对那个女孩子说三个字：</span><br>
+<span class="say">我爱你！</span><br />
+<span class="say">如果非要在这份爱上加一个期限，</span><br>
+<span class="say">我希望是..... </span><br>
+<span class="say">一万年！</span><br />
+<span class="say"><span class="space"></span></span>
+</font></p>
+</div>
+</div>
+<div id="clock-box">
+<script type="text/javascript" src="/kineryi/js/gggg336x280a.js"></script>
+</div>
+<canvas id="keleyi" width="1100" height="680"></canvas>
+</div>
+</div>
+<script>
+(function(){
+var canvas = $('#ke'+'leyi');
+if (!canvas[0].getContext) {
+$("#error").show();
+return false; }
+var width = canvas.width();
+var height = canvas.height(); 
+canvas.attr("width", width);
+canvas.attr("height", height);
+var opts = {
+seed: {
+x: width / 2 - 20,
+color: "rgb(190, 26, 37)",
+scale: 2
+},
+branch: [
+[535, 680, 570, 250, 500, 200, 30, 100, [
+[540, 500, 455, 417, 340, 400, 13, 100, [
+[450, 435, 434, 430, 394, 395, 2, 40]
+]],
+[550, 445, 600, 356, 680, 345, 12, 100, [
+[578, 400, 648, 409, 661, 426, 3, 80]
+]],
+[539, 281, 537, 248, 534, 217, 3, 40],
+[546, 397, 413, 247, 328, 244, 9, 80, [
+[427, 286, 383, 253, 371, 205, 2, 40],
+[498, 345, 435, 315, 395, 330, 4, 60]
+]],
+[546, 357, 608, 252, 678, 221, 6, 100, [
+[590, 293, 646, 277, 648, 271, 2, 80]
+]]
+]] 
+],
+bloom: {
+num: 700,
+width: 1080,
+height: 650,
+},
+footer: {
+width: 1200,
+height: 5,
+speed: 10,
+}
+}
+var tree = new Tree(canvas[0], width, height, opts);
+var seed = tree.seed;
+var foot = tree.footer;
+var hold = 1;
+canvas.click(function(e) {
+var offset = canvas.offset(), x, y;
+x = e.pageX - offset.left;
+y = e.pageY - offset.top;
+if (seed.hover(x, y)) {
+hold = 0; 
+canvas.unbind("click");
+canvas.unbind("mousemove");
+canvas.removeClass('hand');
+}
+}).mousemove(function(e){
+var offset = canvas.offset(), x, y;
+x = e.pageX - offset.left;
+y = e.pageY - offset.top;
+canvas.toggleClass('hand', seed.hover(x, y));
+});
+var seedAnimate = eval(Jscex.compile("async", function () {
+seed.draw();
+while (hold) {
+$await(Jscex.Async.sleep(10));
+}
+while (seed.canScale()) {
+seed.scale(0.95);
+$await(Jscex.Async.sleep(10));
+}
+while (seed.canMove()) {
+seed.move(0, 2);
+foot.draw();
+$await(Jscex.Async.sleep(10));
+}
+}));
+var growAnimate = eval(Jscex.compile("async", function () {
+do {
+tree.grow();
+$await(Jscex.Async.sleep(10));
+} while (tree.canGrow());
+}));
+var flowAnimate = eval(Jscex.compile("async", function () {
+do {
+tree.flower(2);
+$await(Jscex.Async.sleep(10));
+} while (tree.canFlower());
+}));
+var moveAnimate = eval(Jscex.compile("async", function () {
+tree.snapshot("p1", 240, 0, 610, 680);
+while (tree.move("p1", 500, 0)) {
+foot.draw();
+$await(Jscex.Async.sleep(10));
+}
+foot.draw();
+tree.snapshot("p2", 500, 0, 610, 680);
+// 会有闪烁不得意这样做, (＞﹏＜)
+canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+canvas.css("background", "#ffe");
+$await(Jscex.Async.sleep(300));
+canvas.css("background", "none");
+}));
+var jumpAnimate = eval(Jscex.compile("async", function () {
+var ctx = tree.ctx;
+while (true) {
+tree.ctx.clearRect(0, 0, width, height);
+tree.jump();
+foot.draw();
+$await(Jscex.Async.sleep(25));
+}
+}));
+var textAnimate = eval(Jscex.compile("async", function () {
+$("#code").show().typewriter();
+}));
+var runAsync = eval(Jscex.compile("async", function () {
+$await(seedAnimate());
+$await(growAnimate());
+$await(flowAnimate());
+$await(moveAnimate());
+textAnimate().start();
+$await(jumpAnimate());
+}));
+runAsync().start();
 })();
 </script>
-		
-</head>
-<title>vstestsite</title>
-<script>  
-    var i=1;  
-</script>  
- <body>
-  <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXX3X2R"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <style type="text/css">
-    div {
-      margin: 50px 0px;
-      font-size: 30px;
-      color: #B16A68;
-      text-align:center; 
-    }
-
-    .example_table {
-      margin: 0px 150px;
-      min-width: 800px;
-      border: 1px solid #E6BDBD; 
-    }
-    .example_table, .example_table tr{
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
-      border-bottom-color: #E6BDBD;
-    }
-    .example_table td, .example_table th {
-      padding: 5px 10px;
-      font-size: 12px;
-      font-family: Verdana;
-      color: #B16A68;
-     /* width: 15%;*/
-      height: 45px;
-      font-size: 15px;
-      text-align:center;
-    }
-    .example_table tr:nth-child(even) {
-      background: #EED3D2;
-      font-color:#FFF;
-    }
-    .example_table tr:nth-child(odd) {
-      background: #FFF;
-    }
-    .example_table button {
-      border-radius: 4px;
-      border: 1px solid transparent;
-      color: #B16A68;
-      background-color: #fff;
-      border-color: #ccc;
-      cursor:pointer;
-    }
-    .example_table tr:nth-child(odd) button {
-      background-color: #B16A68;
-      color: fff;
-    }
-  </style>
-
-  <div>
-    <p>Victoria's Secret - Tagging Test</p>
-    <button id="button">click</button>
-  </div>
-
- <table class="example_table">
-   <tr>
-      <th>No.</th>
-      <th>EventName</th>
-      <th>Category</th>
-      <th>Action</th>
-      <th style="width:10%;">Label</th>
-      <th>Batch</th>
-      <th>Check</th>
-    </tr>
- <l:iterate><!-- ergodic data set and generate row number-->
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Header Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>header</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.header_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Footer Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>footer</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.footer_navigation_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>First Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>navigation</td>
-      <td>['firstnav-文胸','firstnav-内裤','firstnav-舒适睡衣']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.first_navigation_click()">click</button></td>
-    </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Second Navigation Click</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>navigation</td>
-      <td>['secnav-内裤-款式-半包臀内裤','secnav-文胸-all','secnav-文胸-效果-超薄']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.second_navigation_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Category Clicks</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>['kv','section','今日特惠']</td>
-      <td>dream angels wicked</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_category_click()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Search</td>
-      <td>['homepage','product detail','product list']</td>
-      <td>search</td>
-      <td>['黑色文胸','运动文胸','条纹睡衣']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_search()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Register</td>
-      <td>account</td>
-      <td>register</td>
-      <td>success</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.register()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>User Logout</td>
-      <td>account</td>
-      <td>logout</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.user_logout()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Online Chat Conversation Start</td>
-      <td>chat</td>
-      <td>start</td>
-      <td>['header','footer','product detail']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.online_chat_conversation_start()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Search No Results</td>
-      <td>search no results</td>
-      <td>no results</td>
-      <td>['ABCDEFG','运动长裤','大秀手袋']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.search_no_results()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Filter(PC)</td>
-      <td>product filter</td>
-      <td>['文胸','内裤','舒适睡衣']</td>
-      <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_filter_pc()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Filter(Mobile)</td>
-      <td>product filter</td>
-      <td>文胸</td>
-      <td>['款式-3|4罩杯','颜色-黑色','颜色-条纹']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_filter_mobile()">click</button></td>
-    </tr>
-    </l:iterate>  
-  </table>
-  <div>
-    <p> Category= Ecommerce </p>
-  </div>
-  <table class="example_table">
-   <tr>
-      <th>No.</th>
-      <th>EventName</th>
-      <th>Category</th>
-      <th>Action</th>
-      <th style="width:10%;">Label</th>
-      <th>Batch</th>
-      <th>Check</th>
-    </tr>
- <l:iterate><!-- ergodic data set and generate row number-->	      
-      <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product Click</td>
-      <td>homepage</td>
-      <td>['kv','section','今日特惠']</td>
-      <td>['quick view','normal']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_click()">click</button></td>
-    </tr>  
-     <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Product View</td>
-      <td>ecommerce</td>
-      <td>product view</td>
-      <td>product detail</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.product_view()">click</button></td>
-    </tr>      
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Add to Shopping Cart(On product detail page)</td>
-      <td>ecommerce</td>
-      <td>add to cart</td>
-      <td>product detail</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.add_to_shopping_cart()">click</button></td>
-    </tr>
-     <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Add to Shopping Cart(On other page)</td>
-      <td>ecommerce</td>
-      <td>product view</td>
-      <td>quick view</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.add_to_shopping_cart_pv()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Remove from Shopping Cart</td>
-      <td>ecommerce</td>
-      <td>remove from cart</td>
-      <td>shopping cart</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.remove_from_shopping_cart()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Checkout - Order Submit</td>
-      <td>ecommerce</td>
-      <td>order submit</td>
-      <td>['member','guest']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.checkout_order_submit()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Payment Successful</td>
-      <td>ecommerce</td>
-      <td>successful transaction</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.payment_successful()">click</button></td>
-    </tr>
-    <tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Payment Unsuccessful</td>
-      <td>ecommerce</td>
-      <td>fail transaction</td>
-      <td></td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.payment_unsuccessful()">click</button></td>
-    </tr>
-	<tr>
-      <td><script>document.write(i);i++</script></td>  
-      <td>Ecommerce - Refund and Return Confirm</td>
-      <td>ecommerce</td>
-      <td>['refund','return']</td>
-      <td>['不想要了','尺码不合适']</td>
-      <td></td>
-      <td><button onclick="ga_vs_tracking.refund_and_return_confirm()">click</button></td>
-    </tr>
-  </table>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
 </body>
+</html>
