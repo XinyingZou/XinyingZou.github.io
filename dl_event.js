@@ -414,7 +414,7 @@ ga_vs_tracking.payment_successful = function() {
 		}
 	},
 	'eventCallback' : function(){
-	     ga_set_transaction_cookie(T123456)
+	     ga_set_transaction_cookie('T123456')
 	}
  });
     window._hmt.push(['_trackOrder', {
