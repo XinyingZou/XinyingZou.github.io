@@ -396,22 +396,25 @@ ga_vs_tracking.payment_successful = function() {
     'ecommerce': {
 		'purchase': {
 			'actionField': {
-				'id': t,
+				'id': 'T123456',
 				'affiliation': 'alipay',
-				'revenue': (399*3+0)*0.8,
+				'revenue': 1020,
 				'shipping': 0,
 				'coupon': '345678'
 			},
 			'products': [{
-				 'name': '甄选系列0066文胸',
-				 'id': '234567', 
-				 'price': 399, 
+				 'name': '甄选系列0065文胸',
+				 'id': '123456', 
+				 'price': 500, 
 				 'brand': 'pink',
 				 'category': '文胸', 
-				 'variant': '条纹|37B',
-               			 'quantity': 3
+				 'variant': '条纹|36B',
+               			 'quantity': 2
              }]
 		}
+	},
+	'eventCallback' : function(){
+	     ga_set_transaction_cookie(T123456)
 	}
  });
     window._hmt.push(['_trackOrder', {
